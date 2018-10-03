@@ -4,7 +4,7 @@ This small script helps you to prepare a `LaTeX` project for publication e.g. on
 * __png -> jpg conversion__: reduces size to satisfy size limits of the submissions 
 * __flattening__: creates a single `.tex` document by expanding `\input` and similar macros; copies graphics from subdirs and edit their path in `.tex` doc.
 
-[![asciicast](https://asciinema.org/a/PgZuigtA6H0XphDOmZTpK3c4R.png)](https://asciinema.org/a/PgZuigtA6H0XphDOmZTpK3c4R)
+[![asciicast](https://asciinema.org/a/PgZuigtA6H0XphDOmZTpK3c4R.png)](https://asciinema.org/a/PgZuigtA6H0XphDOmZTpK3c4R?speed=3)
 
 **Disclaimer**: The result can be not perfect, so check `diff` files carefully. 
 **But** the script mostly works well. 
