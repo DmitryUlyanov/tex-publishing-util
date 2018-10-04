@@ -81,13 +81,11 @@ def main():
         for tex_file in tex_files:
             change_paths(tex_file, files, args.flatten, args.convert_to_jpg)
         
-        print(files)
         # 5. Flatten files (copy files from subdirs to the main dir) or convert to rgb.
         flatten_convert_files(project_dir, files, args.flatten, args.convert_to_jpg, args.quality)
 
 
     # Copy form temporary directory to the target one
-    print(save_dir)
     for filename in os.listdir(project_dir):
         shutil.move(f'{project_dir}/{filename}', f'{save_dir}/{filename}')
 
@@ -107,7 +105,6 @@ def main():
 
 def replace_ext(x):
     ext = x.split('.')[-1]
-    print(ext)
     return x[:-len(ext)] + 'jpg' if ext.lower() in EXT else x
 
 
