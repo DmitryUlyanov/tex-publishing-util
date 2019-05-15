@@ -75,7 +75,7 @@ def main():
         #  Change paths to images in the tex file
         
         if args.flatten:
-            tex_files = [f'{project_dir}/main_flat.tex']
+            tex_files = [f'{project_dir}/{main_file}']
         else:
             tex_files = glob2.glob(f'{project_dir}/**/*.tex')
         for tex_file in tex_files:
