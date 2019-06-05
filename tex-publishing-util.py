@@ -217,7 +217,7 @@ def extract_graphics_paths(project_dir, main_file, debug, flatten):
 
 
 def flatten_convert_files(project_dir, files, flatten, convert_to_jpg, quality):
-    for fpath in files:
+    for fpath in list(set(files)):
         ext = fpath.split('.')[-1]
 
         new_path = fpath
