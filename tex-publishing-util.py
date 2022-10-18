@@ -132,7 +132,7 @@ def change_paths(tex_file, files, flatten, convert_to_jpg):
         # Sometimes special symbols are used inside path, so let's try to find dir path
         dirnames_ = sorted(list(set([os.path.dirname(x) for x in files])))[::-1]
         for dir_path in dirnames_:
-            pattern = re.compile(dir_path)
+            pattern = re.compile(os.path.join(dir_path, ''))    # to replace e.g. "fig/" not "fig" with "." everywhere in the tex
             text, num = re.subn(pattern, lambda match: '.', text)
 
     
