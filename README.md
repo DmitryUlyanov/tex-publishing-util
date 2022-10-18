@@ -18,6 +18,8 @@ This small script helps you to prepare a `LaTeX` project for publication e.g. on
 - `huepy` : `pip install huepy`
 - `glob2` : `pip install glob2`
 
+On Ubuntu, one can install the first three via: `sudo apt-get install texlive-extra-utils latexmk`.
+
 # Usage 
 
 ```bash
