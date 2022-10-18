@@ -178,8 +178,8 @@ def remove_redundant_files(project_dir, main_file, save_dir, debug):
 
 
     # Kind of fix
-    for fname in sum([glob.glob(f'{project_dir}/*.{x}') for x in ['bib', 'bst']], []):
-        shutil.copy(fname, save_dir)
+    for fname in sum([glob.glob1(project_dir, f'*.{x}') for x in ['bib', 'bst', 'bbl']], []):    # glob.glob1 is needed since glob.glob misinterprets '[',']','?' symbols
+        shutil.copy(os.path.join(project_dir, fname), save_dir)
 
 
 def extract_graphics_paths(project_dir, main_file, debug, flatten):
